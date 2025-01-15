@@ -1,0 +1,43 @@
+body {
+    background-color: #99999B; /*Color del fondo de la página*/
+}
+
+.navBar a {
+    text-decoration: none; /*Acá le saque las lineas a Home, about me, Services y Contact*/
+    color: black;
+}
+
+.navBar a:hover{
+    color: #074799; /*El color elegido para los servicios y los botones*/
+    text-decoration: none;
+}
+
+.navSar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navSar a:hover {
+    color: #074799;
+    text-decoration: none;
+}
+
+.sectionSkills {
+    background-color: #074799;
+}
+
+button {
+    background-color: #074799;
+    border: none;
+    cursor: pointer;
+}
+
+.navTas a {  /*Acá también le saque las lineas a Service y Contact*/
+    text-decoration: none;
+    color: black;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
