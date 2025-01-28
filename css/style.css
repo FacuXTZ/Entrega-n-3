@@ -2,14 +2,34 @@ body {
     background-color: #99999B; /*Color del fondo de la página*/
 }
 
+.header {
+    display: flex; 
+    justify-content: space-between; /*Acá alinie mi "Barra de navegación" con mi logo*/
+    align-items: center;
+    padding: 1rem;
+}
+
+.navBar {
+    display: flex;
+    list-style-type: none; /*Acá le elimine los puntos*/
+}
+
 .navBar a {
     text-decoration: none; /*Acá le saque las lineas a Home, about me, Services y Contact*/
     color: black;
+    margin-left: 1rem;
+
 }
 
 .navBar a:hover{
     color: #074799; /*El color elegido para los servicios y los botones*/
     text-decoration: none;
+}
+
+.navSar {
+    display: grid;
+    gap: 50px 100px;
+    list-style: none;
 }
 
 .navSar a {
@@ -22,20 +42,51 @@ body {
     text-decoration: none;
 }
 
+.boton-Principal{ /*Esto es para redonder el botón de Full-Stack Developer*/
+    border: none;
+    border-radius: 30px; 
+    padding: 15px 32px;
+}
+
 .sectionSkills {
+    background-color: #99999B;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    padding: 20px 80px;
+}
+
+.service {
+    flex: 1;
+    margin: 8px;
+    border: 1px solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #074799;
 }
 
 button {
     background-color: #074799;
     border: none;
-    cursor: pointer;
+    cursor: pointer;                 /*Acá redondie todos los botones del html, menos el botón principal que lo redondie más arriba aparte*/
+    padding: 20px 80px;
+    border-radius: 20px;
+    text-align: center;
 }
 
 .navTas a {  /*Acá también le saque las lineas a Service y Contact*/
     text-decoration: none;
     color: black;
 }
+
 
 .footer a {
     text-decoration: none;
