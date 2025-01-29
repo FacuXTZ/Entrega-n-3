@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,7 @@
 <body>
     <header>
         <div class="header">
-            <img src="../PreEntrega1-Molina/assets/code.png" alt="Logo" style="width: 75px; height: 75px;"> <!--Logo de la página-->
+            <img src="./assets/code.png" alt="Logo" style="width: 75px; height: 75px;" class="logo"> <!--Logo de la página-->
         </html>
             <ul class="navBar">
                 <li><a href="#home" class="nav-link">Home</a></li>
@@ -23,11 +22,11 @@
     </header>
     <main>
         <section class="sectionPrincipal">
-            <div>
-                <img src="" alt="" >
+            <div class="">
+                <img src="" alt="" class="">
             </div>
             <div class="boton-Principal">
-                <H1>Full-stack Developer</H1>
+                <h1>Full-stack Developer</h1>
                 <button>About me</button>
             </div>
         </section>
@@ -35,15 +34,15 @@
             <article class="flex-container">
                 <div class="service">
                     <h2>Servicio 1</h2>
-                    <button>See more</button>
+                    <button class="small-button">See more</button>
                 </div>
-                <div class="service">
+                <div class="service"> 
                     <h2>Servicio 2</h2>
-                    <button>See more</button>
+                    <button class="small-button">See more</button>
                 </div>
                 <div class="service">
                     <h2>Servicio 3</h2>
-                    <button>See more</button>
+                    <button class="small-button">See more</button>
                 </div>
             </article>
         </section>
@@ -51,38 +50,46 @@
     <div>
     <p>Parrafo para incentivar a la gente a que compre el servicio</p> <!-- Esto es para que el parrafo se quede separado de los servicios-->
                     <img src="" alt="">
-                    <button>Enlace</button>
+                    <button class="enlace-button">Enlace</button>
     </div> 
-    <div>
-        <nav>
-            <div class="navSar"> <!--Estos son los logos para especificar los lenguajes que voy a ofrecer servicio-->
-                <li><img src="../PreEntrega1-Molina/assets/html.png" alt="Logo" style="width: 50px; height: 50px;"></li>
-                <button>Read more</button>
-                <li><img src="../PreEntrega1-Molina/assets/css-3.png" alt="Logo" style="width: 50px; height: 50px;"></li>
-                <button>Read more</button>
-                <li><img src="../PreEntrega1-Molina/assets/java-script.png" alt="Logo" style="width: 50px; height: 50px;"></li>
-                <button>Read more</button>
-                <li><img src="../PreEntrega1-Molina/assets/atom.png" alt="Logo" style="width: 50px; height: 50px;"></li>
-                <button>Read more</button>
-            </div>
-        </nav>
+    <div class="navSar">
+        <li>
+            <img src="./assets/html.png" alt="Logo" style="width: 50px; height: 50px;">
+            <button>Leer más</button>
+        </li>
+        <li>
+            <img src="./assets/css-3.png" alt="Logo" style="width: 50px; height: 50px;">
+            <button>Leer más</button>
+        </li>
+        <li>
+            <img src="./assets/java-script.png" alt="Logo" style="width: 50px; height: 50px;">
+            <button>Leer más</button>
+        </li>
+        <li>
+            <img src="./assets/atom.png" alt="Logo" style="width: 50px; height: 50px;">
+            <button>Leer más</button>
+        </li>
     </div>
     <footer>
-        <div> 
-            <img src="../PreEntrega1-Molina/assets/code.png" alt="Logo" style="width: 50px; height: 50px;"> <!--Logo de la página-->
-            <nav>
-                <ul class="navTas"> 
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./assets/code.png" alt="Logo">
+            </div>
+            <nav class="footer-nav">
+                <ul class="navTas">
                     <li><a href="#services">Services</a></li>
                     <li><a href="contact">Contact</a></li>
                 </ul>
             </nav>
-        </div>
-        <div>
-            <p>Social media</p> <!--Acá decidi poner los logos de mis redes sociales-->
-            <img src="../PreEntrega1-Molina/assets/instagram.png" alt="Logo" style="width: 30px; height: 30px;">
-            <img src="../PreEntrega1-Molina/assets/twitter.png" alt="Logo" style="width: 30px; height: 30px;">
-            <img src="../PreEntrega1-Molina/assets/twitch.png" alt="Logo" style="width: 30px;" height="30px">
-            <img src="../PreEntrega1-Molina/assets/youtube.png" alt="Logo" style="width: 30px;" height="30px">
+            <div class="footer-social">
+                <p>Social media</p>
+                <div class="social-icons">
+                    <img src="./assets/instagram.png" alt="Instagram">
+                    <img src="./assets/twitter.png" alt="Twitter">
+                    <img src="./assets/twitch.png" alt="Twitch">
+                    <img src="./assets/youtube.png" alt="YouTube">
+                </div>
+            </div>
         </div>
     </footer>
 </body>
