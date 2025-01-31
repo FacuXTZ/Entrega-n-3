@@ -1,50 +1,222 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+
+
 body {
     background-color: #99999B; /*Color del fondo de la página*/
 }
 
-.header {
-    display: flex; 
-    justify-content: space-between; /*Acá alinie mi "Barra de navegación" con mi logo*/
-    align-items: center;
-    padding: 1rem;
-}
-
-.navBar {
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #99999B;
     display: flex;
-    list-style-type: none; /*Acá le elimine los puntos*/
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 100px
 }
 
-.navBar a {
-    text-decoration: none; /*Acá le saque las lineas a Home, about me, Services y Contact*/
+.logo {
+    display: flex;
+    align-items: center;                            /*Todo lo que esta antes de "navSar" es para la barra de navegación*/
+    font-size: 20px;
+    font-weight: bold;
     color: black;
-    margin-left: 1rem;
+    margin-top: 10px;
+}
+
+.bars {
+    display: none;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: black;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px; 
 
 }
 
-.navBar a:hover{
-    color: #074799; /*El color elegido para los servicios y los botones*/
-    text-decoration: none;
+.nav-bar ul li a:hover {
+    color: black;
+    background-color: #074799;
+}
+
+.nav-bar ul li a.active {
+    color: black;
+    background-color: #074799;
+}
+
+@media(max-width:800px) {
+    
+    header {
+        padding: 0px 30px;
+    }
+
+    .bars {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bars .line {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin: 6px 0px;
+    }
+
+    .nav-bar {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #99999B;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {                                     
+        height: 450px;
+    }
+    
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 20px;
+    }
+
+    .boton-Principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton-Principal h1 {
+        text-align: center;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+
+    div > p {
+        text-align: center;
+    }
+
+    .enlace-button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .navSar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+
+    .navSar li {
+        width: 45%;
+        margin: 2.5%;
+        list-style: none;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+.navSar li img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+
+.navSar li button {
+    padding: 5px 10px;
+    background-color: #074799;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 }
 
 .navSar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+    display: flex;
+    flex-wrap: flex;
+    justify-content: center;
     justify-items: center;
 }
 
 .navSar li {
+    width: 100%;
+    margin: 20px 0;
     list-style: none;
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-items: center;
 }
 
+
 .navSar img {
-    width: 50px;
-    height: 50px;
-    margin: 0px;
+    width: 40px;
+    height: 40px;
 }
 
 .navSar button a {
