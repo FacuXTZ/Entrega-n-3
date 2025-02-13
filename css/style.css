@@ -1,341 +1,137 @@
-* {
-
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-
+header .logo, header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Arial, Helvetica, sans-serif";
+  box-sizing: border-box;
+}
 
-body {
-    background-color: #99999B; /*Color del fondo de la página*/
+header .logo, header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header {
-    width: 100%;
-    height: 80px;
-    background-color: #99999B;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 0 100px
+  width: 100%;
+  height: 80px;
+  background-color: #99999B;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-top: 10px;
+}
+header .nav-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+}
+header .nav-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .nav-bar ul li a {
+  display: block;
+  color: black;
+  font-size: 18px;
+  padding: 10px 25px;
+  border-radius: 15px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+header .nav-bar ul li a:hover, header .nav-bar ul li a.active {
+  color: black;
+  background-color: #074799;
 }
 
-.logo {
-    display: flex;
-    align-items: center;                            /*Todo lo que esta antes de "navSar" es para la barra de navegación*/
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    margin-top: 10px;
-}
-
-.bars {
-    display: none;
-}
-
-.nav-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 10px;
-}
-
-.nav-bar ul {
-    display: flex;
-}
-
-.nav-bar ul li a {
+@media (max-width: 800px) {
+  header {
+    padding: 0px 30px;
+  }
+  .bars {
     display: block;
-    color: black;
-    font-size: 18px;
-    padding: 10px 25px;
-    border-radius: 15px;
-    transition: 0.2s;
-    margin: 0 5px; 
-
-}
-
-.nav-bar ul li a:hover {
-    color: black;
-    background-color: #074799;
-}
-
-.nav-bar ul li a.active {
-    color: black;
-    background-color: #074799;
-}
-
-@media(max-width:800px) {
-    
-    header {
-        padding: 0px 30px;
-    }
-
-    .bars {
-        display: block;
-        cursor: pointer;
-    }
-
-    .bars .line {
-        width: 30px;
-        height: 3px;
-        background-color: black;
-        margin: 6px 0px;
-    }
-
-    .nav-bar {
-        height: 0px;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        background-color: #99999B;
-        transition: 0.5s;
-        overflow: hidden;
-    }
-
-    .nav-bar.active {                                     
-        height: 450px;
-    }
-    
-    .nav-bar ul {
-        display: block;
-        width: fit-content;
-        margin: 80px auto 0 auto;
-        text-align: center;
-        transition: 0.5s;
-        opacity: 0;
-    }
-
-    .nav-bar.active ul {
-        opacity: 1;
-    }
-
-    .nav-bar ul li a {
-        margin-bottom: 20px;
-    }
-
-    .boton-Principal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .boton-Principal h1 {
-        text-align: center;
-    }
-
-    .flex-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service h2 {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-
-    div > p {
-        text-align: center;
-    }
-
-    .enlace-button {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .navSar {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-
-    .navSar li {
-        width: 45%;
-        margin: 2.5%;
-        list-style: none;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    
-.navSar li img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-
-.navSar li button {
-    padding: 5px 10px;
-    background-color: #074799;
-    color: black;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-}
-
-}
-
-.navSar {
-    display: flex;
-    flex-wrap: flex;
-    justify-content: center;
-    justify-items: center;
-}
-
-.navSar li {
-    width: 100%;
-    margin: 20px 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-items: center;
-}
-
-
-.navSar img {
-    width: 40px;
-    height: 40px;
-}
-
-.navSar button a {
-    margin: 0;
-    width: 40px;
-    font-size: 12px;
-    justify-self: center;
-}
-
-.navSar a {
-    text-decoration: none;
-    color: black;
-}
-
-.navSar a:hover {
-    color: #074799;
-    text-decoration: none;
-}
-
-.sectionPrincipal a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.boton-Principal{ /*Esto es para redonder el botón de Full-Stack Developer*/
-    border: none;
-    border-radius: 30px; 
-    padding: 15px 32px;
-    margin-bottom: 250px;
-}
-
-.sectionSkills {
+  }
+  .bars .line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0px;
+  }
+  .nav-bar {
+    height: 0px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
     background-color: #99999B;
-    margin-top: 40px;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: space-around;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .nav-bar.active {
+    height: 450px;
+  }
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
     text-align: center;
-    border: none;
-    border-radius: 20px;
-    padding: 20px 80px;
-    align-items: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-bar ul.active {
+    opacity: 1;
+  }
+  .nav-bar ul li a {
+    margin-bottom: 20px;
+  }
 }
-
-.service {
-    flex: 1;
-    margin: 8px;
-    border: 1px solid;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #074799;
-    text-align: center;
-}
-
-.small-button a {
-    margin: 0;
-    width: 40px;
-    font-size: 12px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-button {
-    background-color: #074799;
-    border: none;
-    cursor: pointer;                 /*Acá redondie todos los botones del html, menos el botón principal que lo redondie más arriba aparte*/
-    padding: 20px 80px;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.enlace-button {
-    margin-bottom: 250px;
-}
-
-.navTas a {  /*Acá también le saque las lineas a Service y Contact*/
-    text-decoration: none;
-    color: black;
-}
-
-
-.footer a {
-    text-decoration: none;
-    color: black;
-}
-
-
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .footer-logo, .footer-social {
-    text-align: center;
+  text-align: center;
 }
 
 .footer-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
 }
 
 .footer-logo img, .footer-social img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .footer-social .social-icons img {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
 }
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
