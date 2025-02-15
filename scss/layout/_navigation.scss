@@ -1,50 +1,59 @@
-@media(max-width:800px) {
-    header {
-        padding: 0px 30px;
-    }
+.nav-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+}
 
-    .bars {
-        display: block;
-        cursor: pointer;
+.nav-bar ul {
+    display: flex;
+}
 
-        .line {
-            width: 30px;
-            height: 3px;
-            background-color: black;
-            margin: 6px 0px;
-        }
-    }
+.nav-bar ul li a {
+    display: block;
+    color: black;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
 
+.nav-bar ul li a:hover, .nav-bar ul li a.active{
+    color: black;
+    background-color: #074799;
+}
+
+@media (max-width: 800px) {
     .nav-bar {
         height: 0px;
-        position: absolute;
         top: 80px;
         left: 0;
         right: 0;
         width: 100vw;
-        background-color: $background-color;
+        background-color: #99999B;
         transition: 0.5s;
         overflow: hidden;
+    }
 
-        &.active {
-            height: 450px;
-        }
+    .nav-bar.active {
+        height: 450px;
+    }
 
-        ul {
-            display: block;
-            width: fit-content;
-            margin: 80px auto 0 auto;
-            text-align: center;
-            transition: 0.5s;
-            opacity: 0;
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
 
-            &.active {
-                opacity: 1;
-            }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
 
-            li a {
-                margin-bottom: 20px;
-            }
-        }
+    .nav-bar ul li a {
+        margin-bottom: 20px;
     }
 }
