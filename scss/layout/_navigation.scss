@@ -19,18 +19,24 @@
     margin: 0 5px;
 }
 
-.nav-bar ul li a:hover, .nav-bar ul li a.active{
+.nav-bar ul li a:hover, .nav-bar ul li a.active {
     color: black;
     background-color: #074799;
 }
 
+.nav-hidden {
+    display: none;
+}
+
 @media (max-width: 800px) {
     .nav-bar {
-        height: 0px;
-        top: 80px;
+        position: absolute;
+        top: 0;
         left: 0;
         right: 0;
         width: 100vw;
+        height: 0;
+        z-index: 9999;
         background-color: #99999B;
         transition: 0.5s;
         overflow: hidden;
@@ -38,12 +44,13 @@
 
     .nav-bar.active {
         height: 450px;
+        padding-bottom: 20px;
     }
 
     .nav-bar ul {
         display: block;
         width: fit-content;
-        margin: 80px auto 0 auto;
+        margin: 40px auto 0 auto;
         text-align: center;
         transition: 0.5s;
         opacity: 0;
@@ -54,6 +61,17 @@
     }
 
     .nav-bar ul li a {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+    }
+
+    .bars {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: black;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10000; 
     }
 }

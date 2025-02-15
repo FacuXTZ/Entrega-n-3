@@ -14,11 +14,13 @@ body {
 .boton-Principal {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     border: none;
     border-radius: 30px;
     padding: 15px 32px;
     margin-bottom: 250px;
+    position: relative;
+    z-index: 1;
 }
 
 .flex-container {
@@ -122,10 +124,6 @@ button {
         gap: 10px;
         justify-items: center;
         
-    }
-    
-    .nav-hidden {
-        display: none;
     }
 
     .navSar li {

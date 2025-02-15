@@ -1,5 +1,8 @@
-bars = document.querySelector(".bars");
-bars.onclick = function() {                            // esto es para el full responsive 
-    navBar = document.querySelector(".nav-bar");
-    navBar.classList.toggle("active")
-}
+document.addEventListener('DOMContentLoaded', function() {
+    var bars = document.querySelector('.bars');
+    var navBar = document.querySelector('.nav-bar');
+
+    bars.onclick = function() {
+        navBar.classList.toggle('active');
+    };
+});
