@@ -1,160 +1,173 @@
-@use 'base/reset';
-@use 'layout/header';
-@use 'layout/navigation';
-@use 'layout/footer';
-@use 'utilities/extends';
-@use 'utilities/maps';
-@use 'utilities/mixins';
-@use 'utilities/variables' as vars;
+@use "base/reset";
+@use "layout/header";
+@use "layout/navigation";
+@use "layout/footer";
+@use "utilities/extends";
+@use "utilities/maps";
+@use "utilities/mixins";
+@use "utilities/variables" as vars;
+@use "pages/services";
+@use "pages/lenguajes";
+@use "pages/contact";
+@use "pages/about-me";
 
 body {
-    background-color: vars.$secondary;
+  background-color: vars.$secondary;
 }
 
 .boton-Principal {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: none;
-    border-radius: 30px;
-    padding: 15px 32px;
-    margin-bottom: 250px;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 32px;
+  margin-bottom: 250px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-button a,
+.enlace-button a {
+  color: vars.$accent;
+  text-decoration: none;
 }
 
 .flex-container {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    border: none;
-    border-radius: 20px;
-    padding: 20px 80px;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  padding: 20px 80px;
+  align-items: center;
 }
 
 .service {
-    flex: 1;
-    margin: 8px;
-    border: 1px solid;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: vars.$primary-color;
-    text-align: center;
+  flex: 1;
+  margin: 8px;
+  border: 1px solid;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$primary-color;
+  text-align: center;
 }
 
 .small-button a {
-    margin: 0;
-    width: 40px;
-    font-size: 12px;
-    margin-top: 10px;
-    text-align: center;
+  margin: 0;
+  width: 40px;
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 button {
-    background-color: vars.$primary-color;
-    border: none;
-    cursor: pointer;
-    padding: 20px 80px;
-    border-radius: 20px;
-    text-align: center;
+  background-color: vars.$primary-color;
+  border: none;
+  cursor: pointer;
+  padding: 20px 80px;
+  border-radius: 20px;
+  text-align: center;
 }
 
 .enlace-button {
-    display: block;
-    margin-bottom: 250px;
+  display: block;
+  margin-bottom: 250px;
 }
 
-.navTas a, .navSar a, .footer a {
-    text-decoration: none;
-    color: vars.$accent;
+.navTas a,
+.navSar a,
+.footer a {
+  text-decoration: none;
+  color: vars.$accent;
 }
 
-.navTas a:hover, .navSar a:hover {
-    color: vars.$primary-color;
+.navTas a:hover,
+.navSar a:hover {
+  color: vars.$primary-color;
 }
 
 .navSar {
-    display: flex;
-    flex-wrap: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navSar li {
-    width: 100%;
-    margin: 20px 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .navSar img {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .navSar button a {
-    margin: 0;
-    width: 40px;
-    font-size: 12px;
-    text-align: center;
+  margin: 0;
+  width: 40px;
+  font-size: 12px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
-    .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
 
-    .service {
-        flex: 1 1 45%;
-        margin: 5px;
-    }
+  .service {
+    flex: 1 1 45%;
+    margin: 5px;
+  }
 
-    .navSar {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        justify-items: center;
-        
-    }
+  .navSar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
 
-    .navSar li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .navSar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .navSar li img {
-        width: 50px;
-        height: 50px;
-    }
+  .navSar li img {
+    width: 50px;
+    height: 50px;
+  }
 
-    .navSar li button {
-        width: 100%;
-        text-align: center;
-    }
+  .navSar li button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @keyframes slide-in-fwd-top {
-    0% {
-        transform: translateZ(-1400px) translateY(-300px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateZ(0) translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateZ(-1400px) translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
 }
 
 .slide-in-fwd-top {
-    -webkit-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-in-fwd-top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-fwd-top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }

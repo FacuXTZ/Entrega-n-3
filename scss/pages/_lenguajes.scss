@@ -1,0 +1,50 @@
+.navSars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.language {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.language img {
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width: 800px) {
+  .navSars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .navSars li {
+    width: 45%;
+    margin: 2.5%;
+    list-style: none;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navSars li img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .navSars li button {
+    padding: 5px 10px;
+    background-color: #074799;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
